@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <title>Document</title>
+  <script>
+    var detectSize = function () {
+      var width = $(window).width()
+      var height = $(window).height()
+      $('.width').text(width)
+      $('.height').text(height)
+    }
+    $(function () {
+      detectSize()
+      $(window).resize(function () {
+        detectSize()
+      })
+    })
+  </script>
+</head>
+<body>
+  <div>
+    <h1>Device Size</h1>
+    <h3>
+      width: <span class="width">0</span>px
+    </h3>
+    <h3>
+      height: <span class="height">0</span>px
+    </h3>
+  </div>
+</body>
+</html>
